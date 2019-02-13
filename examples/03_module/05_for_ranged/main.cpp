@@ -8,5 +8,9 @@ int main()
 	loop_string_w_index("John");
 	loop_string_w_auto("John");
 
+	loop_vector_w_index();
+
+	loop_vector_w_auto();
+
 	return 0;
 }

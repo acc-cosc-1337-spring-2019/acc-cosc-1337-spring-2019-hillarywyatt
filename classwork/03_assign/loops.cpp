@@ -12,18 +12,7 @@ returns 120
 DON'T FORGET TO WRITE TEST CASE.  See file loop_test.cpp
 */
 
-//int factorial_of_num(int num)
-//{
-	//int i = 1, factorial = 0;
 
-	//while (i <= num)
-	//{
-	//	factorial = factorial *i;
-	//	++i;
-	//}
-
-	//return factorial;
-//}
 
 
 int factorial_of_num(int num)

@@ -11,3 +11,9 @@ returns 2
 
 void loop_string_w_index(std::string str);
 void loop_string_w_auto(std::string str);
+
+
+void loop_vector_w_index();
+
+
+void loop_vector_w_auto();
