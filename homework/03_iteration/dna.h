@@ -17,4 +17,4 @@ Write prototype for function get_dna_complement that
 accepts a string and returns a string
 */
 
-std::string get_dna_compliment(std::string dna);
+std::string get_dna_complement(std::string dna);

@@ -1,6 +1,10 @@
 #include<iostream>
+#include<string>
+#include "dna.h"
+
 using::std::cout;
 using::std::cin;
+using::std::string;
 
 /*
 Write code that prompts user to enter 1 for Get GC Content, 
@@ -11,11 +15,26 @@ user enters a y or Y.
 */
 int main() 
 {
-	int menu_choice;
 	char choice;
+	int menu_choice;
 
 	do
 	{
+		string dna;
+		cout << "Enter '1' to get the GC content of DNA or '2' to get the DNA's complement: ";
+
+		if(menu_choice == 1)
+		{
+			cout << "Enter DNA sequence: ";
+			cin >> dna;
+			cout << get_gc_content(dna);
+		}
+		else
+		{
+			cout << "Enter DNA sequence: ";
+			cin >> dna;
+			cout << get_dna_complement(dna);
+		}
 
 
 	} while (choice == 'Y' || choice == 'y');
