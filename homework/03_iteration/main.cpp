@@ -17,7 +17,6 @@ int main()
 {
 	char choice;
 	int menu_choice;
-
 	
 	do
 	{
@@ -32,14 +31,14 @@ int main()
 		if(menu_choice == 1)
 		{
 		
-			cout << get_gc_content(dna) << "\n";
+			cout << "GC Content: " << get_gc_content(dna) << "\n";
 		}
 		else
 		{
-			cout << get_dna_complement(dna) <<"\n";
+			cout << "DNA Complement: " << get_dna_complement(dna) <<"\n";
 		}
 
-		cout << "Would you like to work with DNA? Enter 'Y' if yes: ";
+		cout << "Would you like to continue to work with DNA? Enter 'Y' if yes: ";
 		cin >> choice;
 
 	} while (choice == 'Y' || choice == 'y');

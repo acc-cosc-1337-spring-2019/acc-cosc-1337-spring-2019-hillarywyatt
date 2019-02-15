@@ -60,19 +60,19 @@ string get_dna_complement(string dna)
 	{
 		if (d == 'A')
 		{
-			d = 'T';
+			reverse[d] = 'T';
 		}
 		if (d == 'T')
 		{
-			d = 'A';
+			reverse[d] = 'A';
 		}
 		if (d == 'C')
 		{
-			d = 'G';
+			reverse[d] = 'G';
 		}
 		else
 		{
-			d = 'C';
+			reverse[d] = 'C';
 		}
 		
 		
