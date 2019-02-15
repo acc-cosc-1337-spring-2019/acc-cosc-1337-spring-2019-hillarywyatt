@@ -24,10 +24,4 @@ void loop_vector_w_index(std::vector <int> values);
 
 void loop_vector(std::vector <int>& values);
 
-void loop_const_vector(const std::vector<int>& values)
-{
-	for (auto v : values)
-	{
-		std::cout << v << "\n";
-	}
-}
+void loop_const_vector(const std::vector<int>& values);

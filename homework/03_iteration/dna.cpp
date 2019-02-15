@@ -12,7 +12,7 @@ Return quotient.
 */
 double get_gc_content(const std::string& dna)
 {
-	int count = 0;
+	double count = 0;
 
 	for (auto d : dna)
 	{

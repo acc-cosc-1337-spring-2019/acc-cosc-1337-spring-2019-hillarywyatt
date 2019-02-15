@@ -18,27 +18,31 @@ int main()
 	char choice;
 	int menu_choice;
 
+	
 	do
 	{
+
 		string dna;
 		cout << "Enter '1' to get the GC content of DNA or '2' to get the DNA's complement: ";
+		cin >> menu_choice;
+
+		cout << "Enter DNA sequence: ";
+		cin >> dna;
 
 		if(menu_choice == 1)
 		{
-			cout << "Enter DNA sequence: ";
-			cin >> dna;
-			cout << get_gc_content(dna);
+		
+			cout << get_gc_content(dna) << "\n";
 		}
 		else
 		{
-			cout << "Enter DNA sequence: ";
-			cin >> dna;
-			cout << get_dna_complement(dna);
+			cout << get_dna_complement(dna) <<"\n";
 		}
 
+		cout << "Would you like to work with DNA? Enter 'Y' if yes: ";
+		cin >> choice;
 
 	} while (choice == 'Y' || choice == 'y');
 	
 
-	return 0;
 }

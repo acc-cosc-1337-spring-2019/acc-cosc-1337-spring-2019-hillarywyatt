@@ -1,5 +1,3 @@
-#include <vector>
-#include <string>
 #include "sequence.h"
 #include<iostream>
 
@@ -27,11 +25,11 @@ int main()
 
 
 	cout << "Enter a name to search: ";
-	cin << search;
+	cin >> search;
 	cout << "Enter a name to replace it with: ";
-	cin << replace;
+	cin >> replace;
 
-	update_vector_elements(names, search, replace);
+	update_vector_element(names, search, replace);
 	display_vector(names);
 
 	return 0;
