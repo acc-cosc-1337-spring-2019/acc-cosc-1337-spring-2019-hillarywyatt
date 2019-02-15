@@ -8,6 +8,8 @@ returns 2
 */
 
 #include<iostream>
+#include "sample_vectors.h"
+#include<vector>
 
 void loop_string_w_index(std::string str);
 void loop_string_w_auto(std::string str);
@@ -17,3 +19,15 @@ void loop_vector_w_index();
 
 
 void loop_vector_w_auto();
+
+void loop_vector_w_index(std::vector <int> values);
+
+void loop_vector(std::vector <int>& values);
+
+void loop_const_vector(const std::vector<int>& values)
+{
+	for (auto v : values)
+	{
+		std::cout << v << "\n";
+	}
+}

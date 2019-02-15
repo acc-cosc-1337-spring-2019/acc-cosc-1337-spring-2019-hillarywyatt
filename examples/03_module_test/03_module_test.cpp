@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "sample_while.h"
 #include "sample_value_ref.h"
+#include "sample_for_ranged.h"
 
 TEST_CASE("Test function sum_of_squares with preincrement ++i") 
 {
@@ -25,4 +26,32 @@ TEST_CASE("Test pass by value and reference")
 	REQUIRE(num1 == 1);
 	REQUIRE(num2 == 50);
 	
+}
+
+TEST_CASE("Test pass vector by value")
+{
+	
+	std::vector<int>num = { 44, 55, 77, 11, 99 }; //comparing vector to original
+	std::vector<int>nums = { 44, 55, 77, 11, 99 };
+	loop_vector_w_index(nums);
+
+	for (int i = 0; 1 < num.size(); ++i)
+	{
+		REQUIRE(num[i] == nums[i]);        //require two vectors to be exact same at index
+	}
+
+}
+
+TEST_CASE("Test pass vector by reference")
+{
+
+	std::vector<int>num = { 1000, 55, 77, 11, 99 }; //comparing vector to original
+	std::vector<int>nums = { 44, 55, 77, 11, 99 };
+	loop_vector(nums);
+
+	for (int i = 0; 1 < num.size(); ++i)
+	{
+		REQUIRE(num[i] == nums[i]);        //require two vectors to be exact same at index
+	}
+
 }
