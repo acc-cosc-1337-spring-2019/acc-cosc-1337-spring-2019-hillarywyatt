@@ -33,10 +33,9 @@ string get_reverse_string(string dna)
 	string reverse_string;
 
 	//reverse loop
-	int i;
 	for (int i = dna.length()-1; i >= 0; --i)
 		{
-			reverse_string = dna[i];
+			reverse_string.push_back(dna[i]);//or reverse_string +
 		}
 
 	return reverse_string;
@@ -60,19 +59,19 @@ string get_dna_complement(string dna)
 	{
 		if (d == 'A')
 		{
-			reverse[d] = 'T';
+			d = 'T';
 		}
-		if (d == 'T')
+		else if (d == 'T')
 		{
-			reverse[d] = 'A';
+			d = 'A';
 		}
-		if (d == 'C')
+		else if (d == 'C')
 		{
-			reverse[d] = 'G';
+			d = 'G';
 		}
 		else
 		{
-			reverse[d] = 'C';
+			d = 'C';
 		}
 		
 		
