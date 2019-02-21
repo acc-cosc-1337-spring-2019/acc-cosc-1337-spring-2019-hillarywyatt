@@ -44,9 +44,12 @@ int main()
 			cout << "Enter a number: ";
 			cin >> number;
 
-			//vector <int> prime_numbers = vector_of_primes(number);
-			//cout << "Primes up to that number: " << prime_numbers << "\n";
-			cout << "Primes up to that number: " << vector_of_primes(number) << "\n";
+			vector <int> prime_numbers = vector_of_primes(number);
+			cout << "Primes up to that number: " << "\n";
+			for (auto p : prime_numbers) 
+			{
+				cout << p << " ";
+			}
 		}
 
 		cout << "Would you like to work with another number? Enter 'Y' if yes: ";
