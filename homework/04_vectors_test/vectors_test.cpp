@@ -32,7 +32,7 @@ Write a test case for is_prime with values:
 43 returns true
 44 returns false
 */
-TEST_CASE("Test max value function")
+TEST_CASE("Test is prime function")
 {
 	REQUIRE(is_prime(2) == true);
 	REQUIRE(is_prime(4) == false);
