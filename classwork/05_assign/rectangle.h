@@ -8,12 +8,12 @@ class Rectangle
 {
 public:
 	Rectangle(int wid, int hei);     //constructor
-	int get_area();
+	int get_area() const;
 	
 
 private:
 	int area;
 	int width;
 	int height;
-	void canlculate_area();
+	void calculate_area();
 };

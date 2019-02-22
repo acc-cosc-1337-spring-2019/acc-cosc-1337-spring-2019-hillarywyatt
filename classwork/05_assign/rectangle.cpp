@@ -8,15 +8,16 @@ that calculates area of the rectangle.  The class has 3 int private variables ar
 Rectangle::Rectangle(int wid, int hei) :
 	width(wid), height(hei)
 {
+	calculate_area();
 }
 
-int Rectangle::get_area()    // don't have to pass balance as param becuase balance lives within class
+int Rectangle::get_area() const   // don't have to pass balance as param becuase balance lives within class
 {
 	
 	return area;
 }
 
-void Rectangle::canlculate_area()
+void Rectangle::calculate_area()
 {
 	if (width > 0 && height > 0)
 	{
