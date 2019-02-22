@@ -15,14 +15,18 @@ int get_max_from_vector(const vector<int>& numbers)
 		//	return n;
 		//
 	//}
+	int max = 0;
+
 	for (int i = 0; i < numbers.size(); ++i)
 	{
-		if (numbers[i] > numbers[i + 1])
+		if (max > numbers[i])
 		{
-			return numbers[i];
+			 max = numbers[i];
 		}
 	
 	}
+
+	return max;
 }
 
 /*
