@@ -88,11 +88,21 @@ bool TicTacToe::check_diagonal_win()
 	
 }
 
-//void TicTacToe::clear_board()
-//{
-//}
-
-//bool TicTacToe::check_board_full()
-//{
-//	return false;
-//}
+void TicTacToe::clear_board()
+{
+	for (auto& p : pegs)
+	{
+		p = " ";
+	}
+}
+bool TicTacToe::check_board_full()
+{
+	for (auto& p : pegs)
+	{
+		if (p == " ")
+		{
+			return false;
+		}
+	}
+	return true;
+}

@@ -164,3 +164,4 @@ TEST_CASE("Test win by diagonal 2", "[X wins disgonally other way]") // need to 
 	//X wins 
 	REQUIRE(board.game_over() == true);
 }
+
