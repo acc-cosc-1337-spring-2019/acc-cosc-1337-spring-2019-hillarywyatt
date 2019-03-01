@@ -1,8 +1,10 @@
 #include "tic_tac_toe.h"
+#include <iostream>
 
 void TicTacToe::start_game(std::string first_player)
 {
 	next_player = first_player;
+	clear_board();
 }
 
 std::string TicTacToe::get_player() const
@@ -12,7 +14,7 @@ std::string TicTacToe::get_player() const
 
 bool TicTacToe::game_over()
 {
-	if (check_column_win() || check_row_win() || check_diagonal_win())
+	if (check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
 	{
 		return true;
 	}
@@ -25,9 +27,13 @@ void TicTacToe::mark_board(int position)
 	set_next_player();
 }
 
-//void TicTacToe::display_board() const
-//{
-//}
+void TicTacToe::display_board() const
+{
+	for (std::size_t i = 0; i < 3; i += 3)
+	{
+		std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2];
+	}
+}
 
 void TicTacToe::set_next_player()
 {
@@ -45,7 +51,7 @@ bool TicTacToe::check_column_win()
 {
 	for (std::size_t i = 0; i < 3; ++i)
 	{
-		if(pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i+6] && pegs[i +6] != " ")
+		if(pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && pegs[i + 6] != " ")
 		{
 			return true;
 		}

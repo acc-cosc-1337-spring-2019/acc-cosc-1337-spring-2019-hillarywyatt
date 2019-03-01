@@ -17,4 +17,4 @@ private: //access specifier; data not directly available to users of the class
 	bool amount_greater_than_zero(double amount);
 };
 
-# end if //!BANK_ACCOUNT_H
+#endif //!BANK_ACCOUNT_H
