@@ -2,7 +2,8 @@
 #include "catch.hpp"
 #include "basics.h"
 
-TEST_CASE("Test sum_numbers", "[1,5,10]") {
+TEST_CASE("Test sum_numbers", "[1,5,10]") 
+{
 	REQUIRE(sum_numbers(1, 0) == 1);
 	REQUIRE(sum_numbers(2, 3) == 5);
 	REQUIRE(sum_numbers(5, 5) == 10);
@@ -13,7 +14,8 @@ TEST_CASE("Test sum_numbers", "[1,5,10]") {
 //2, 2 to equal 4
 //5, 5 to equal 25
 //10,10 to equal 100
-TEST_CASE("Test multiply_numbers", "[2,5,10]") {
+TEST_CASE("Test multiply_numbers", "[2,5,10]")
+{
 	REQUIRE(multiply_numbers(2, 2) == 4);
 	REQUIRE(multiply_numbers(5, 5) == 25);
 	REQUIRE(multiply_numbers(10, 10) == 100);

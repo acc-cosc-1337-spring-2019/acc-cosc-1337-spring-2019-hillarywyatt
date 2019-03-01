@@ -16,14 +16,14 @@ Width	Height		Area
 */
 TEST_CASE("Test get area")
 {
-	//Rectangle rectangle(4, 5); //have to create instance of class to test
+	//Rectangle rectangle1(4, 5); //have to create instance of class to test
 								//call function with new param to test function
 
 	//REQUIRE(rectangle.get_area() == 20);
 
-	//Rectangle rectangle(10, 10);
+	//Rectangle rectangle2(10, 10);
 	//REQUIRE(rectangle.get_area() == 100);
 
-	//Rectangle rectangle(100, 10);
+	//Rectangle rectangle3(100, 10);
 	//REQUIRE(rectangle.get_area() == 1000);
 }
