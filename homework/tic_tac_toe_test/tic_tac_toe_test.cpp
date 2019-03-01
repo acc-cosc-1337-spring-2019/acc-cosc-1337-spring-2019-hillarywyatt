@@ -151,7 +151,7 @@ TEST_CASE("Test win by diagonal 1", "[X wins disgonally]")
 //3 4 5
 //6 7 8
 
-TEST_CASE("Test tie", "[ ]") 
+TEST_CASE("Test tie", "[test tie ]") 
 {
 	TicTacToe board;
 	board.start_game("X");
@@ -161,7 +161,7 @@ TEST_CASE("Test tie", "[ ]")
 	board.mark_board(2);//o      
 	REQUIRE(board.game_over() == false);
 	board.mark_board(3);//x 
-	//board.display_board();
+	board.display_board();
 	REQUIRE(board.game_over() == false);
 	board.mark_board(5);//o
 

@@ -21,6 +21,7 @@ int main()
 			std::cout << "Enter position: ";
 			std::cin >> position;
 			tic_tac_toe.mark_board(position);
+			tic_tac_toe.display_board();
 		}
 
 		std::cout << "Play again?";
