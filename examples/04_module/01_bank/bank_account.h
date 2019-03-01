@@ -1,3 +1,7 @@
+#ifndef BANK_Account_H
+#define BANK_ACCOUNT_H
+
+
 class BankAccount 
 {
 public:
@@ -12,3 +16,5 @@ private:
 	double balance;
 	bool amount_greater_than_zero(double amount);
 };
+
+# end if //!BANK_ACCOUNT_H
