@@ -179,5 +179,5 @@ TEST_CASE("Test tie", "[test tie ]")
 	REQUIRE(board.game_over() == true);
 }
 
-
+//REQUIRE(board.get_winner() = c);
 

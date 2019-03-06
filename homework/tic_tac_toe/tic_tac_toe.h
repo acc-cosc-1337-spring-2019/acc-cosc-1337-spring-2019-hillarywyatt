@@ -1,3 +1,6 @@
+#ifndef TIC_TAC_TOE_H
+#define TIC_TAC_TOE_H
+
 #include<string>
 #include<vector>
 
@@ -12,6 +15,8 @@ public:
 	void mark_board(int position);
 	void display_board() const;
 
+	std::string get_winner();
+
 private:
 	std::vector<string> pegs {9, " "};
 	std::string next_player;
@@ -22,4 +27,10 @@ private:
 	bool check_diagonal_win();
 	void clear_board();
 	bool check_board_full();
+
+	std::string winner;// stores winner of game X, O, or C
+	void set_winner();//if check_board_full winner is C else winner is next_player
 };
+
+
+#endif // !TIC_TAC_TOE_H
