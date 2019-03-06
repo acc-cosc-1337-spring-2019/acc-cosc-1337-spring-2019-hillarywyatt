@@ -72,7 +72,7 @@ bool TicTacToe::check_row_win()
 	return false;
 
 }
-// wine diagonally 
+// wins diagonally 
 //0 1 2
 //3 4 5
 //6 7 8
