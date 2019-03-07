@@ -1,20 +1,20 @@
 #include "tic_tac_toe.h"
 #include <iostream>
 
-void TicTacToe::start_game(std::string first_player)
+void TicTacToe::start_game(string first_player)
 {
 	next_player = first_player;
 	clear_board();
 }
 
-std::string TicTacToe::get_player() const
+string TicTacToe::get_player() const
 {
 	return next_player;
 }
 
 bool TicTacToe::game_over()
 {
-	if (check_column_win() || check_row_win() || check_diagonal_win() || check_board_full())
+	if (check_column_win() || check_row_win() || check_diagonal_win() || check_board_full() )
 	{
 		return true;
 	}
@@ -24,7 +24,8 @@ bool TicTacToe::game_over()
 void TicTacToe::mark_board(int position)
 {
 	pegs[ position - 1 ] = next_player;
-	if (game_over == false)
+
+	if (game_over() == false)
 	{
 		set_next_player();
 	}
@@ -33,7 +34,7 @@ void TicTacToe::mark_board(int position)
 
 void TicTacToe::display_board() const
 {
-	for (std::size_t i = 0; i < 3; i += 3)
+	for (std::size_t i = 0; i < 9; i += 3)
 	{
 		std::cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n";
 	}
@@ -50,23 +51,30 @@ void TicTacToe::set_next_player()
 		next_player = "X";
 	}
 }
+//win by column: 0,3,6 or 1,4,5 or 2,5,8
+//0 1 2
+//3 4 5
+//6 7 8
 
 bool TicTacToe::check_column_win()
 {
 	for (std::size_t i = 0; i < 3; ++i)
 	{
-		if(pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && pegs[i + 6] != " ")
+		if(pegs[i] == pegs[i + 3] && pegs[i + 3] == pegs[i + 6] && pegs[i + 6] != " ")//each index plus 3 to get to new row of that column
 		{
 			return true;
 		}
 	}
 	return false;
-	
 }
+//win by row: 0,1,2 or 3,4,5 or 6,7,8
+//0 1 2
+//3 4 5
+//6 7 8
 
 bool TicTacToe::check_row_win()
 {
-	for (std::size_t i = 0; i < 9; i += 3)
+	for (std::size_t i = 0; i < 9; i += 3)// loops to new row because +=3/could also do if for each row instead of looping through indexes
 	{
 		if (pegs[i] == pegs[i + 1] && pegs[i + 1] == pegs[i + 2] && pegs[i + 2] != " ")
 		{
@@ -74,9 +82,8 @@ bool TicTacToe::check_row_win()
 		}
 	}
 	return false;
-
 }
-// wins diagonally 
+// 0,4,8 or 2,4,6 wins diagonally 
 //0 1 2
 //3 4 5
 //6 7 8
@@ -95,7 +102,6 @@ bool TicTacToe::check_diagonal_win()
 	{
 		return false;
 	}
-	
 }
 
 void TicTacToe::clear_board()
@@ -116,19 +122,20 @@ bool TicTacToe::check_board_full()
 	}
 	return true;
 }
-std::string get_winner()
-{
-	return winner;
-}
 
-void set_winner()
+void TicTacToe::set_winner()
 {
-	if (check_board_full() == true)
+	if (check_column_win() == false && check_row_win() == false && check_diagonal_win() == false && check_board_full() == true)
 	{
-		winner = 'C';
+		winner = "C";
 	}
 	else
 	{
 		winner = next_player;
 	}
+}
+
+string TicTacToe::get_winner()
+{
+	return winner;
 }
