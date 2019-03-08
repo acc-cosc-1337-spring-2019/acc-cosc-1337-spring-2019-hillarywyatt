@@ -21,11 +21,11 @@ int main()
 
 		while (tic_tac_toe.game_over() == false)
 		{
-			std::cout << "Enter position 1-9: for " << tic_tac_toe.get_player();
+			std::cout << "Enter position 1-9: for " << tic_tac_toe.get_player()  << ": ";
 			std::cin >> position;
 			tic_tac_toe.mark_board(position);
 			tic_tac_toe.display_board();
-			std::cout << "\n\n";
+			std::cout << "\n";
 		}
 
 		//save game to tictactoe manager class

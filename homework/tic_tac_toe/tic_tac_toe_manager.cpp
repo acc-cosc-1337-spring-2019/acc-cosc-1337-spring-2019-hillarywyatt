@@ -12,12 +12,12 @@ void TicTacToeManager::display_history()const
 {
 	for (auto g : games)
 	{
-		b.display_board(); 
+		g.display_board(); //why is this not b.display_board()?
 		std::cout << "\n" << "X wins: " << x_win << "\n" << "O wins: " << o_win << "\n" << "Ties:   " << ties << "\n";
 	}	
 }
 
-void TicTacToeManager::update_winner_count(string winner)
+void TicTacToeManager::update_winner_count(string winner) //counts are not updating
 {
 	if (winner == "X")
 	{
