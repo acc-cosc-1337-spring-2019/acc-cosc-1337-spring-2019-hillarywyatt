@@ -25,7 +25,7 @@ void TicTacToe::mark_board(int position)
 {
 	pegs[ position - 1 ] = next_player;
 
-	if (game_over() == false)
+	if (!game_over()) //If fame_over == false
 	{
 		set_next_player();
 	}
@@ -123,9 +123,9 @@ bool TicTacToe::check_board_full()
 	return true;
 }
 
-void TicTacToe::set_winner()
+void TicTacToe::set_winner(string player)
 {
-	if (check_column_win() == false && check_row_win() == false && check_diagonal_win() == false && check_board_full() == true)
+	if (check_board_full())
 	{
 		winner = "C";
 	}

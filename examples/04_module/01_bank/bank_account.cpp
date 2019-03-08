@@ -7,6 +7,8 @@ BankAccount::BankAccount(int act, double bal) :
 
 double BankAccount::get_balance() const    // don't have to pass balance as param becuase balance lives within class
 {
+
+	transactions.push_back(Transaction("Inquiry", 0, balance));
 	return balance;
 }
 

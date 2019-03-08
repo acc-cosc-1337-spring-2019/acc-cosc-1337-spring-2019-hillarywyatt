@@ -38,7 +38,7 @@ vector view: 0, 3, and 6
 	board.mark_board(7);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //- 2 -
@@ -60,7 +60,7 @@ TEST_CASE("Test win by second column", "[X wins second column]")
 	board.mark_board(8);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //- - 3
@@ -82,7 +82,7 @@ TEST_CASE("Test win by third column", "[X wins third column]")
 	board.mark_board(9);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //1 2 3
@@ -104,7 +104,7 @@ TEST_CASE("Test win by first row", "[X wins first row]")
 	board.mark_board(3);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //- - -
@@ -126,7 +126,7 @@ TEST_CASE("Test win by second row", "[X wins second row]")
 	board.mark_board(6);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //- - -
@@ -148,7 +148,7 @@ TEST_CASE("Test win by third row", "[X wins third row]")
 	board.mark_board(9);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //1 - -
@@ -170,7 +170,7 @@ TEST_CASE("Test win by diagonal 1", "[X wins disgonally]")
 	board.mark_board(9);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); -->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 
 //- - 3
@@ -192,7 +192,7 @@ TEST_CASE("Test win by diagonal 2", "[X wins disgonally other way]")
 	board.mark_board(7);//X 
 	//X wins 
 	REQUIRE(board.game_over() == true);
-	//REQUIRE(board.get_winner() == "X" || board.get_winner() == "O"); //-->this line creating error-not sure how to fix
+	REQUIRE(board.get_winner() == "X");
 }
 //1 2 3
 //4 5 6

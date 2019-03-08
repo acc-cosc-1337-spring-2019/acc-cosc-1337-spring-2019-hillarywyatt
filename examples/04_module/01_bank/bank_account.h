@@ -1,6 +1,8 @@
 #ifndef BANK_Account_H
 #define BANK_ACCOUNT_H
 #include <iostream>
+#include <vector>
+#include "transaction.h"
 
 class BankAccount 
 {
@@ -18,6 +20,7 @@ public:
 
 
 private: //access specifier; data not directly available to users of the class
+	std::vector<Transaction> transactions;
 	int account_number;
 	double balance;
 	bool amount_greater_than_zero(double amount);
