@@ -9,7 +9,7 @@ using::std::vector;
 class TicTacToeManager
 {
 public:
-	void save_game(TicTacToe b);
+	void save_game(const TicTacToe b);
 	void display_history()const;
 
 private:

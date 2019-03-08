@@ -1,7 +1,7 @@
 #include "tic_tac_toe_manager.h"
 //Write class function implementations here
 
-void TicTacToeManager::save_game(TicTacToe b)
+void TicTacToeManager::save_game(const TicTacToe b)
 {
 	update_winner_count(b.get_winner());
 	games.push_back(b);

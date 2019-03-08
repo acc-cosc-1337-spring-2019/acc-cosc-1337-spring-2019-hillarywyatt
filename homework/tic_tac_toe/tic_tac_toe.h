@@ -16,7 +16,7 @@ public:
 	void mark_board(int position);
 	void display_board() const;
 	string get_player() const;
-	string get_winner();
+	string get_winner() const;
 	
 
 private:
@@ -30,7 +30,7 @@ private:
 	bool check_diagonal_win();
 	void clear_board();
 	bool check_board_full();
-	void set_winner(string player);//if check_board_full = true winner is C else winner is next_player
+	void set_winner();//if check_board_full = true winner is C else winner is next_player
 };
 
 #endif // !TIC_TAC_TOE_H
