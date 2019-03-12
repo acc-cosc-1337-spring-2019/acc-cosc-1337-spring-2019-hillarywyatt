@@ -5,10 +5,10 @@ BankAccount::BankAccount(int act, double bal) :
 {
 }
 
-double BankAccount::get_balance() const    // don't have to pass balance as param becuase balance lives within class
+double BankAccount::get_balance()    // don't have to pass balance as param becuase balance lives within class
 {
-
-	transactions.push_back(Transaction("Inquiry", 0, balance));
+	Transaction t("Inquiry", 0, balance);
+	transactions.push_back(t);
 	return balance;
 }
 
@@ -17,6 +17,9 @@ void BankAccount::deposit(double amount)
 	if (amount_greater_than_zero(amount))
 	{
 		balance += amount;
+
+		Transaction t("Deposit", amount, balance);
+		transactions.push_back(t);
 	}
 
 }
@@ -26,7 +29,16 @@ void BankAccount::withdraw(double amount)
 	if (amount > 0 && balance >= amount)
 	{
 		balance -= amount;
+
+		Transaction t("Withdraw", amount, balance);
+		transactions.push_back(t);
 	}
+}
+
+std::vector<Transaction> BankAccount::get_transactions() const
+{
+	return transactions;
+	
 }
 
 bool BankAccount::amount_greater_than_zero(double amount)
@@ -42,7 +54,7 @@ void display(const BankAccount& act) //don't need scope operator :: because frie
 
 }
 
-BankAccount operator +(BankAccount& act1, const BankAccount& act2);//return type BankAccount/compiler knows it is friend
+BankAccount operator +(BankAccount& act1, const BankAccount& act2)//return type BankAccount/compiler knows it is friend
 //passing 2 BankAccount class parameters
 {
 	act1.balance = act1.balance + act2.balance;
@@ -50,7 +62,7 @@ BankAccount operator +(BankAccount& act1, const BankAccount& act2);//return type
 	return act1;
 }
 
-friend std::ostream & operator << (std::ostream & out, const BankAccount & b);
+friend std::ostream & operator <<(std::ostream & out, const BankAccount & b)
 {
 	out << "Account: " << b.account_number() << "\n";// out is instance of ostream class
 	out << "Balance: " << b.balance() << "\n";
